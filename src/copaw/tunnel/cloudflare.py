@@ -55,7 +55,7 @@ class CloudflareTunnelDriver:
             self._binary_mgr = binary_manager
         else:
             self._binary_mgr = BinaryManager(
-                progress_callback=progress_callback
+                progress_callback=progress_callback,
             )
         self._process: Optional[asyncio.subprocess.Process] = None
         self._info: Optional[TunnelInfo] = None
